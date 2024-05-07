@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import "./root.css";
-import { useSession } from "next-auth/react";
-import AccessDenied from "../Access/AcessDenied";
 import Link from "next/link";
 
 export default function Home() {
