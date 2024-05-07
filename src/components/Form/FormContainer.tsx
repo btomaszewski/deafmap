@@ -161,15 +161,8 @@ function FormContainer({ questions, onComplete }: FormContainerProps) {
 
   return (
     <div className="form-parent">
-      <FormContext.Provider
-        value={{
-          activePage,
-          changeActivePage: setActivePage,
-        }}
-      >
-        <ProgressBar steps={content.length} current={activePage}></ProgressBar>
-        {content[Math.max(0, activePage)]}
-      </FormContext.Provider>
+      <ProgressBar steps={content.length} current={activePage}></ProgressBar>
+      {content[Math.max(0, activePage)]}
     </div>
   );
 }
