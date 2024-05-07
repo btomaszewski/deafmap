@@ -3,8 +3,6 @@ import {
   CollapsibleComponent,
   useCollapsible,
 } from "@/components/GIS/components/CollapsibleComponent/CollapsibleComponent";
-import { MapLayer } from "@/components/GIS/components/MapLayer";
-import { SimpleComponent } from "@/components/GIS/components/Debug/MapDebugComponent";
 import Map from "@arcgis/core/Map";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
