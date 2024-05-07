@@ -1,0 +1,70 @@
+.form-button {
+  color: white;
+  background-color: rgb(var(--button-background-rgb));
+  text-align: center;
+  border-radius: 5px;
+}
+
+.large-button {
+  min-width: var(--long-width);
+  height: 50px;
+}
+
+.small-button {
+  width: var(--small-width);
+  height: 30px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  margin: 0;
+  border: none;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  display: contents;
+}
+
+.toggle-button-selected img[src$=".svg"] {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(4%) saturate(12%)
+    hue-rotate(319deg) brightness(104%) contrast(90%);
+}
+
+.toggle-button-unselected img[src$=".svg"] {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%)
+    hue-rotate(252deg) brightness(105%) contrast(102%);
+}
+
+.toggle-button-selected {
+  background-color: white;
+}
+
+.toggle-button-unselected {
+  background-color: rgb(var(--button-background-rgb));
+}
+
+.toggle-button-img-container {
+  border-color: rgb(var(--button-background-rgb));
+  width: var(--small-width);
+  height: var(--small-width);
+  border-width: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button-img-container img {
+  width: var(--icon-width);
+  height: var(--icon-width);
+}
+
+.toggle-button-container {
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  width: 100px;
+  height: 135px;
+  margin: 10px 0px;
+}

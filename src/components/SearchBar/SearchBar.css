@@ -1,0 +1,19 @@
+.search-bar-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.search-text {
+  position: absolute;
+  padding-left: 10px;
+  transform: translateY(25px);
+}
+
+.search-icon {
+  position: absolute;
+  transform: translate(calc(var(--long-width) - 30px), 25px);
+}
+
+.search-text-hidden {
+  visibility: hidden;
+}

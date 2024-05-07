@@ -1,0 +1,11 @@
+.report-button {
+  --report-button-size: 70px;
+  background-color: rgb(var(--button-background-rgb));
+  height: var(--report-button-size);
+  width: var(--report-button-size);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(-50vw + var(--report-button-size) / 2));
+}

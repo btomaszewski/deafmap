@@ -1,0 +1,135 @@
+.question-grid {
+  display: grid;
+  grid-template-rows: 80% 20%;
+  min-height: 600px;
+  height: 700px;
+}
+
+.bool-button {
+  min-width: var(--mid-width);
+}
+
+.form-button {
+  color: white;
+  background-color: rgb(var(--button-background-rgb));
+  text-align: center;
+  font-size: medium;
+  height: 50px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-roboto);
+  font-weight: 700;
+}
+
+.large-button {
+  min-width: var(--long-width);
+}
+
+.question-title {
+  font-family: var(--font-open_sans);
+  font-size: x-large;
+  font-family: 600;
+}
+
+.question-content {
+  display: grid;
+  grid-template-rows: auto 90%;
+  font-family: var(--font-roboto);
+}
+
+.summary-box {
+  min-height: 181px;
+  width: var(--long-width);
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--tertiary-rgb));
+  margin: 18px auto;
+  padding: 16px;
+}
+
+.info-review {
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(var(--foreground-rgb));
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.question-navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0px;
+}
+
+.radio-button {
+  border-radius: 5px;
+  background-color: rgb(var(--button-background-rgb));
+  height: 80px;
+  width: 80px;
+  margin: 8px;
+  display: grid;
+}
+
+.radio-parent p {
+  width: 80px;
+  height: 48px;
+  text-wrap: wrap;
+  text-align: center;
+  font-family: var(--font-roboto);
+}
+
+.radio-parent img {
+  place-self: center;
+}
+
+.radio-parent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-button {
+  background-color: rgb(var(--summary-edit-button-rgb));
+  width: 90px;
+  height: 30px;
+}
+
+.summary-parent {
+  overflow: scroll;
+}
+
+.video-player {
+  width: 185px;
+  height: 111px;
+}
+
+.photo-button {
+  height: 30px;
+  width: 275px;
+}
+
+.camera-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(var(--tertiary-rgb));
+  height: 281px;
+  width: var(--long-width);
+  margin: auto;
+}
+
+.image-bounding-box {
+  border-style: dashed;
+  border-width: 2px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+input[type="file"] {
+  display: none;
+}
