@@ -5,7 +5,7 @@ import {
 } from "@/components/GIS/components/CollapsibleComponent/CollapsibleComponent";
 import Map from "@arcgis/core/Map";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { MapState } from "@/components/GIS/MapViewer";
 import { MapAttachedObject } from "@/components/GIS/components/MapAttachedObject";
@@ -22,12 +22,11 @@ import "./map.css";
 import { SearchBar } from "@/components/SearchBar/SearchBar";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import {
-  HazardCategory,
   HazardCategoryValues,
-  HazardDescriptor,
   HazardDescriptorValues,
   HazardLookup,
 } from "@/lib/gis_data";
+import { redirect } from "next/navigation";
 
 export default function MapDisplay() {
   const [searchState, setSearchState] = useState("");
@@ -78,7 +77,7 @@ export default function MapDisplay() {
         value: "0",
       },
       {
-        symbol: createSymbol("Buildings", "Other"),
+        symbol: createSymbol("Building", "Other"),
         value: "1",
       },
       {
@@ -132,7 +131,7 @@ export default function MapDisplay() {
                   className="report-button"
                   onClick={(e) => {
                     e.preventDefault();
-                    console.log("Button Pressed");
+                    redirect("/Report");
                   }}
                 >
                   <Image

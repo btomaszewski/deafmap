@@ -61,7 +61,7 @@ export enum HazardDescriptor {
   Other = 49,
 }
 
-export type HazardDescriptorValues = keyof typeof HazardDescriptor;
+export type HazardDescriptorValues = keyof typeof _HazardDescriptor;
 
 export type HazardCategoryValues = keyof typeof _HazardCategory;
 
@@ -71,7 +71,7 @@ const _HazardCategory = {
     title: "Severe Weather",
     color: [80, 175, 15],
   },
-  Buildings: {
+  Building: {
     value: 1,
     title: "Buildings",
     color: [133, 133, 133],
@@ -97,255 +97,264 @@ const _HazardDescriptor = {
   Wire_Down: {
     value: 0,
     title: "Wire Down",
-    color: [0, 0, 0],
+    color: [255, 0, 0],
   },
   Tree_Down: {
     value: 1,
     title: "Tree_Down",
-    color: [0, 0, 0],
+    color: [0, 70, 5],
   },
   Ice_Storm: {
     value: 2,
     title: "Ice Storm",
-    color: [0, 0, 0],
+    color: [0, 229, 255],
   },
   Winter_Storm: {
     value: 3,
     title: "Winter Storm",
-    color: [0, 0, 0],
+    color: [13, 115, 170],
   },
   Blizzard: {
     value: 4,
     title: "Blizzard",
-    color: [0, 0, 0],
+    color: [155, 195, 255],
   },
   Hail_Storm: {
     value: 5,
     title: "Hail Storm",
-    color: [0, 0, 0],
+    color: [30, 55, 100],
   },
   Extreme_Cold: {
     value: 6,
     title: "Extreme Cold",
-    color: [0, 0, 0],
+    color: [50, 10, 195],
   },
   Flood: {
     value: 7,
     title: "Flood",
-    color: [0, 0, 0],
+    color: [25, 30, 215],
   },
   Debris: {
     value: 8,
     title: "Debris",
-    color: [0, 0, 0],
+    color: [100, 40, 0],
   },
   Dense_Fog: {
     value: 9,
     title: "Dense Fog",
-    color: [0, 0, 0],
+    color: [155, 155, 155],
   },
   Thunder_Storm: {
     value: 10,
     title: "Thunder Storm",
-    color: [0, 0, 0],
+    color: [240, 225, 100],
   },
   Heatwave: {
     value: 11,
     title: "Heatwave",
-    color: [0, 0, 0],
+    color: [225, 60, 40],
   },
   Wildfire: {
     value: 12,
     title: "Wildfire",
-    color: [0, 0, 0],
+    color: [250, 100, 0],
   },
   Tornado_Warning: {
     value: 13,
     title: "Tornado Warning",
-    color: [0, 0, 0],
+    color: [80, 70, 120],
   },
   Landslide: {
     value: 14,
     title: "Landslide",
-    color: [0, 0, 0],
+    color: [80, 25, 0],
   },
   Tornado_Siren: {
     value: 15,
     title: "Tornado Siren",
-    color: [0, 0, 0],
+    color: [100, 90, 140],
   },
   Announcement: {
     value: 16,
     title: "Announcement",
-    color: [0, 0, 0],
+    color: [195, 255, 0],
   },
   Fire: {
     value: 17,
     title: "Fire",
-    color: [0, 0, 0],
+    color: [255, 105, 45],
   },
   Need_Rescue: {
     value: 18,
     title: "Need Rescue",
-    color: [0, 0, 0],
+    color: [160, 0, 0],
   },
   Closed: {
     value: 19,
     title: "Closed",
-    color: [0, 0, 0],
+    color: [200, 15, 0],
   },
   Wheelchair_Access: {
     value: 20,
     title: "Wheelchair Access",
-    color: [0, 0, 0],
+    color: [40, 70, 120],
   },
   Elevator_Out: {
     value: 21,
     title: "Elevator Out",
-    color: [0, 0, 0],
+    color: [60, 65, 77],
   },
   Alarm: {
     value: 22,
     title: "Alarm",
-    color: [0, 0, 0],
+    color: [242, 31, 35],
   },
   Evacuate_Building: {
     value: 23,
     title: "Evacuate Building",
-    color: [0, 0, 0],
+    color: [120, 20, 25],
   },
   Construction: {
     value: 24,
     title: "Construction",
-    color: [0, 0, 0],
+    color: [220, 220, 0],
   },
   Car_Accident: {
     value: 25,
     title: "Car Accident",
-    color: [0, 0, 0],
+    color: [222, 0, 210],
   },
   Rolled_Truck: {
     value: 26,
     title: "Rolled Truck",
-    color: [0, 0, 0],
+    color: [225, 0, 140],
   },
   Stalled_Car: {
     value: 27,
     title: "Stalled Car",
-    color: [0, 0, 0],
+    color: [0, 211, 222],
   },
   Event_Traffic: {
     value: 28,
     title: "Event Traffic",
-    color: [0, 0, 0],
+    color: [100, 255, 110],
   },
   Police_Barricade: {
     value: 29,
     title: "Police Barricade",
-    color: [0, 0, 0],
+    color: [100, 15, 250],
   },
   Bridge_Out: {
     value: 30,
     title: "Bridge Out",
-    color: [0, 0, 0],
+    color: [219, 115, 220],
   },
   Road_Closed: {
     value: 31,
     title: "Road Closed",
-    color: [0, 0, 0],
+    color: [219, 190, 115],
   },
   Seasonal_Road: {
     value: 32,
     title: "Seasonal Road",
-    color: [0, 0, 0],
+    color: [125, 105, 45],
   },
   Radiation: {
     value: 33,
     title: "Radiation",
-    color: [0, 0, 0],
+    color: [203, 235, 0],
   },
   Chemical_Spill: {
     value: 34,
     title: "Chemical Spill",
-    color: [0, 0, 0],
+    color: [155, 255, 75],
   },
   Shelter_In_Place: {
     value: 35,
     title: "Shelter In Place",
-    color: [0, 0, 0],
+    color: [75, 205, 255],
   },
   Evacuation_Area: {
     value: 36,
     title: "Evacuation Area",
-    color: [0, 0, 0],
+    color: [5, 128, 176],
   },
   Active_Shooter: {
     value: 37,
     title: "Active Shooter",
-    color: [0, 0, 0],
+    color: [5, 5, 95],
   },
   Police_Standoff: {
     value: 38,
     title: "Police Standoff",
-    color: [0, 0, 0],
+    color: [40, 40, 95],
   },
   Food_Shortage: {
     value: 39,
     title: "Food Shortage",
-    color: [0, 0, 0],
+    color: [75, 125, 85],
   },
   Gas_Shortage: {
     value: 40,
     title: "Gas Shortage",
-    color: [0, 0, 0],
+    color: [110, 90, 35],
   },
   Pandemic: {
     value: 41,
     title: "Pandemic",
-    color: [0, 0, 0],
+    color: [165, 5, 75],
   },
   Amber_Alert: {
     value: 42,
     title: "Amber Alert",
-    color: [0, 0, 0],
+    color: [215, 55, 0],
   },
   No_Power: {
     value: 43,
     title: "No Power",
-    color: [0, 0, 0],
+    color: [65, 65, 25],
   },
   No_Internet: {
     value: 44,
     title: "No Internet",
-    color: [0, 0, 0],
+    color: [143, 3, 145],
   },
   No_Cell_Service: {
     value: 45,
     title: "No_Cell_Service",
-    color: [0, 0, 0],
+    color: [205, 93, 207],
   },
   Water_Main_Burst: {
     value: 46,
     title: "Water Main Burst",
-    color: [0, 0, 0],
+    color: [30, 15, 195],
   },
   Boil_Water_Notice: {
     value: 47,
     title: "Boil Water Notice",
-    color: [0, 0, 0],
+    color: [128, 121, 217],
   },
   No_Heating: {
     value: 48,
     title: "No Heating",
-    color: [0, 0, 0],
+    color: [56, 36, 5],
   },
   Other: {
     value: 50,
     title: "Other",
-    color: [0, 0, 0],
+    color: [255, 0, 200],
+  },
+  Wind_Storm: {
+    value: 51,
+    title: "Wind Storm",
+    color: [128, 128, 128],
   },
 };
 
 export function HazardLookup(h: HazardCategoryValues) {
   return RecordLookup(_HazardCategory, h);
+}
+
+export function HazardDescriptorLookup(d: HazardDescriptorValues) {
+  return RecordLookup(_HazardDescriptor, d);
 }

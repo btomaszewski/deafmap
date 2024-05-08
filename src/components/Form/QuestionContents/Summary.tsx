@@ -10,8 +10,10 @@ interface SummaryProps {
 export function Summary({ summaryObjects }: SummaryProps) {
   return (
     <>
-      <div>
-        <p className="header-2 my-8">Summary of Your Report</p>
+      <div key="summary-parent">
+        <p key="summary-title" className="header-2 my-8">
+          Summary of Your Report
+        </p>
         {summaryObjects}
       </div>
       <SubmitButton />

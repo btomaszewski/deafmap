@@ -4,12 +4,14 @@ import {
   HazardCategory,
   HazardCategoryValues,
   HazardDescriptor,
+  HazardDescriptorLookup,
   HazardDescriptorValues,
   HazardLookup,
 } from "@/lib/gis_data";
 import Point, { SpatialReference } from "@arcgis/core/geometry";
 import { addFeatures } from "@esri/arcgis-rest-feature-service";
 import { ApplicationCredentialsManager } from "@esri/arcgis-rest-request";
+import { redirect } from "next/navigation";
 
 export async function Submit(formData: FormData) {
   const appManager = ApplicationCredentialsManager.fromCredentials({
@@ -19,7 +21,7 @@ export async function Submit(formData: FormData) {
   console.log(formData);
 
   const categoryFD = formData.get("Category")?.toString();
-  if (!categoryFD) return;
+  if (!categoryFD) redirect("/Report/false");
 
   const category: HazardCategory = HazardLookup(
     categoryFD as HazardCategoryValues
@@ -27,10 +29,11 @@ export async function Submit(formData: FormData) {
   //HazardCategory[categoryFD as HazardCategoryValues];
 
   const optionFD = formData.get(`${categoryFD}_Options`)?.toString();
-  if (!optionFD) return;
+  if (!optionFD) redirect("/Report/false");
 
-  const option: HazardDescriptor =
-    HazardDescriptor[optionFD as HazardDescriptorValues];
+  const option: HazardDescriptor = HazardDescriptorLookup(
+    optionFD as HazardDescriptorValues
+  ).value;
 
   const image = formData.get("Image_URL") as File;
   let imageData;
@@ -47,7 +50,7 @@ export async function Submit(formData: FormData) {
     // });
   }
   const location_txt = formData.get("userLocation");
-  if (!location_txt) return;
+  if (!location_txt) redirect("/Report/false");
   const location = JSON.parse(location_txt.toString());
   console.log(
     `Location type: ${typeof location}, x: ${typeof location.x}, ${
@@ -85,15 +88,13 @@ export async function Submit(formData: FormData) {
           console.log(`Add features ${i} success?: ${success}`);
           if (!success) {
             console.log(resp.addResults[i].error?.description);
+            redirect("/Report/false");
           }
         }
       }
     })
     .catch((e) => {
-      console.log(e);
+      redirect("/Report/false");
     });
-}
-
-function getRandomInRange(from: number, to: number, fixed: number) {
-  return (Math.random() * (to - from) + from) * 1; //.toFixed(fixed);
+  redirect("/Report/true");
 }
